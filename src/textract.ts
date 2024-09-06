@@ -17,8 +17,11 @@ async function detectTextFromImage(imagePath: string) {
     });
     const response = await client.send(command);
 
-    response.Blocks?.forEach((block) => {
-      console.log(block.Text);
+    response.Blocks?.forEach((block, index) => {
+      if (block.BlockType === "LINE") {
+        console.log(`Linha ${index + 1}:`);
+        console.log(block.Text);
+      }
     });
   } catch (error) {
     console.error("Erro ao detectar texto:", error);
