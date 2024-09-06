@@ -19,8 +19,7 @@ async function detectTextFromImage(imagePath: string) {
 
     response.Blocks?.forEach((block, index) => {
       if (block.BlockType === "LINE") {
-        console.log(`Linha ${index + 1}:`);
-        console.log(block.Text);
+        console.log(`Linha ${index + 1}:`, block.Text);
       }
     });
   } catch (error) {
