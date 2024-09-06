@@ -1,0 +1,19 @@
+{
+  "name": "hackathon-textract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "start": "node dist/textract.js"
+  },
+  "author": "Pelotão Medprev",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-textract": "^3.645.0",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4"
+  }
+}
